@@ -2,7 +2,7 @@
 
 set -ex
 
-REPO="git@github.com:square/picasso.git"
+REPO="git@github.com:trungstormsix/picasso.git"
 DIR=temp-clone
 
 # Delete any existing temporary website clone

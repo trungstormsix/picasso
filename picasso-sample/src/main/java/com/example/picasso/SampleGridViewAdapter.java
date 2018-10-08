@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import com.squareup.picasso3.Callback;
+import com.squareup.picasso3.Picasso;
 import com.squareup.picasso3.provider.PicassoProvider;
 
 import java.io.File;

@@ -737,9 +737,7 @@ public class RequestCreator {
         callback);
     picasso.enqueueAndSubmit(action);
   }
-public void onSuccess(){
 
-}
   private @Nullable Drawable getPlaceholderDrawable() {
     return placeholderResId == 0
         ? placeholderDrawable

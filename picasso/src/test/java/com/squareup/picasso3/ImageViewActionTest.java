@@ -64,7 +64,7 @@ public class ImageViewActionTest {
         new ImageViewAction(picasso, target, null, null, 0, false, callback);
     request.complete(new RequestHandler.Result(bitmap, MEMORY));
     verify(target).setImageDrawable(any(PicassoDrawable.class));
-    verify(callback).onSuccess();
+    verify(callback).onSuccess(bitmap);
   }
 
   @Test

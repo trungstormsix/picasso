@@ -59,7 +59,7 @@ public class RemoteViewsActionTest {
     RemoteViewsAction action = createAction(callback);
     action.complete(new RequestHandler.Result(bitmap, NETWORK));
     verify(remoteViews).setImageViewBitmap(1, bitmap);
-    verify(callback).onSuccess();
+    verify(callback).onSuccess(bitmap);
   }
 
   @Test public void errorWithNoResourceIsNoop() {
