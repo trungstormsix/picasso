@@ -27,7 +27,7 @@ class FetchAction extends Action {
 
   @Override void complete(RequestHandler.Result result) {
     if (callback != null) {
-      callback.onSuccess();
+      callback.onSuccess(result.getBitmap());
     }
   }
 

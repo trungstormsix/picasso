@@ -1,6 +1,7 @@
 package com.example.picasso;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -61,7 +62,7 @@ public class SampleGalleryActivity extends PicassoSampleActivity {
     animator.setDisplayedChild(1);
 
     PicassoProvider.get().load(image).fit().centerInside().into(imageView, new EmptyCallback() {
-      @Override public void onSuccess() {
+      @Override public void onSuccess(Bitmap bitmap) {
         // Index 0 is the image view.
         animator.setDisplayedChild(0);
       }

@@ -466,7 +466,7 @@ public class RequestCreator {
             log(OWNER_MAIN, VERB_COMPLETED, request.plainId(), "from " + MEMORY);
           }
           if (callback != null) {
-            callback.onSuccess();
+            callback.onSuccess(bitmap);
           }
           return;
         }
@@ -723,7 +723,7 @@ public class RequestCreator {
           log(OWNER_MAIN, VERB_COMPLETED, request.plainId(), "from " + MEMORY);
         }
         if (callback != null) {
-          callback.onSuccess();
+          callback.onSuccess(bitmap);
         }
         return;
       }
@@ -737,7 +737,9 @@ public class RequestCreator {
         callback);
     picasso.enqueueAndSubmit(action);
   }
+public void onSuccess(){
 
+}
   private @Nullable Drawable getPlaceholderDrawable() {
     return placeholderResId == 0
         ? placeholderDrawable

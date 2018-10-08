@@ -41,7 +41,7 @@ abstract class RemoteViewsAction extends Action {
     target.remoteViews.setImageViewBitmap(target.viewId, result.getBitmap());
     update();
     if (callback != null) {
-      callback.onSuccess();
+      callback.onSuccess(result.getBitmap());
     }
   }
 

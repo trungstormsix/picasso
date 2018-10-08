@@ -48,7 +48,7 @@ class ImageViewAction extends Action {
     PicassoDrawable.setResult(target, picasso.context, result, noFade, indicatorsEnabled);
 
     if (callback != null) {
-      callback.onSuccess();
+      callback.onSuccess(result.getBitmap());
     }
   }
 

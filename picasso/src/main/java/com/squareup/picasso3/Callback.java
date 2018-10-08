@@ -15,16 +15,18 @@
  */
 package com.squareup.picasso3;
 
+import android.graphics.Bitmap;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 
 public interface Callback {
-  void onSuccess();
+  void onSuccess(@Nullable Bitmap bitmap);
 
   void onError(@NonNull Throwable t);
 
   class EmptyCallback implements Callback {
 
-    @Override public void onSuccess() {
+    @Override public void onSuccess(@Nullable Bitmap bitmap) {
     }
 
     @Override public void onError(@NonNull Throwable t) {
